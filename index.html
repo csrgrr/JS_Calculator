@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let cifra="";
+        let acumulado=0;
+        p_operacion=true;
+        let sumar=false;
+        let restar=false;
+        let multiplicar = false;
+        let dividir = false;
+        let reiniciar = false;
+         function display_nums(number){
+           document.getElementById("display").value=cifra+number;
+           cifra=document.getElementById("display").value;
+         }
+
+         function reinicio(){
+            cifra="";
+            reiniciar=true;
+            acumulado=parseInt(document.getElementById("display").value = 0);
+            cifra=0;
+         }
+
+         function suma(){
+            if(p_operacion == false){
+            if(restar){
+                acumulado = acumulado - parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+              
+            }else if(dividir){
+                acumulado = acumulado/parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            } else if (multiplicar) {
+            acumulado = acumulado * parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+            }else {
+            acumulado = acumulado + parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+            }
+        } else {
+            acumulado=parseInt(cifra);
+            cp_operacion=false;
+        }
+             cifra="";
+            sumar=true;
+         }
+
+         function resta(){
+            if(p_operacion == false){
+            if(sumar){
+                acumulado = acumulado+parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            }else if(dividir){
+                acumulado = acumulado/parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            } else if (multiplicar){
+            acumulado = acumulado * parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+            }else{
+            acumulado = acumulado - parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+          }
+        } else {
+            acumulado=parseInt(cifra);
+            cp_operacion=false;
+        }
+            cifra="";
+            sumar=false;
+            restar=true;
+         }
+
+         function multiplicacion(){
+            if(p_operacion == false){
+            if(restar){
+                acumulado = acumulado - parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+              
+            } else if(sumar){
+                acumulado = acumulado+parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            } else if(dividir){
+                acumulado = acumulado/parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            } else {
+            acumulado = acumulado * parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+            }
+        } else {
+            acumulado=parseInt(cifra);
+            cp_operacion=false;
+        }
+             cifra="";
+            multiplicar=true;
+         }
+
+    
+         function division(){
+            if(p_operacion == false){
+            if(restar){
+                acumulado = acumulado - parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+              
+            } else if(sumar){
+                acumulado = acumulado+parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            } else if(multiplicar){
+                acumulado = acumulado*parseInt(cifra);
+                document.getElementById("display").value=acumulado;
+            } else {
+            acumulado = acumulado / parseInt(cifra);
+            document.getElementById("display").value=acumulado;
+            }
+        } else {
+            acumulado=parseInt(cifra);
+            cp_operacion=false;
+        }
+             cifra="";
+            dividir=true;
+         }
+
+         function result(){
+            if(sumar){
+                document.getElementById("display").value=acumulado+parseInt(cifra);
+                console.log(acumulado)
+                console.log(parseInt(cifra))
+                console.log(acumulado+parseInt(cifra))
+
+            } else if(restar){
+                document.getElementById("display").value=acumulado-parseInt(cifra);
+
+            }else if(multiplicar){
+                document.getElementById("display").value=acumulado*parseInt(cifra);
+
+            }else{
+                document.getElementById("display").value=acumulado/parseInt(cifra);
+
+            }
+
+            acumulado=parseInt(document.getElementById("display").value);
+            cifra=0;
+         }
+       
+    </script>
+</head>
+
+
+
+<body style="background-color: white;">
+<table width="15%">
+    <tr>
+        <td colspan="4">
+        <input name="display" type="text" class="color_display" id="display" size="50">
+    </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td><input type="button" id="reiniciar" value="C" onclick="reinicio()"></td>
+        <td class="buttons"><input type="button" id="suma" value="+" onclick="suma()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="num7" value="7" onclick="display_nums(7)"></td>
+        <td><input type="button" id="num8" value="8" onclick="display_nums(8)"></td>
+        <td><input type="button" id="num9" value="9" onclick="display_nums(9)"></td>
+        <td class="buttons"><input type="button" id="resta" value="-" onclick="resta()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="num4" value="4" onclick="display_nums(4)"></td>
+        <td><input type="button" id="num5" value="5" onclick="display_nums(5)"></td>
+        <td><input type="button" id="num6" value="6" onclick="display_nums(6)"></td>
+        <td class="buttons"><input type="button" id="multiplicacion" value="*" onclick="multiplicacion()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="num1" value="1" onclick="display_nums(1)"></td>
+        <td><input type="button" id="num2" value="2" onclick="display_nums(2)"></td>
+        <td><input type="button" id="num3" value="3" onclick="display_nums(3)" ></td>
+        <td class="buttons"><input type="button" id="division" value="/" onclick="division()"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="button" id="num0" value="0" onclick="display_nums(0)"></td>
+        <td><input type="button" id="numcoma" value="," onclick="display_nums('.')"></td>
+        <td class="buttons"><input type="button" id="equal" value="=" onclick="result()"></td>
+    </tr>
+
+</table>
+<script>         
+document.getElementById("display").value=0;
+</script>
+</body>
+</html>

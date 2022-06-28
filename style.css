@@ -1,0 +1,32 @@
+
+    table {
+        width: 10em;
+        height: 10em;
+        text-align: center;
+    }
+    table, th, td {
+      border:1px solid black;
+      border-collapse: collapse;
+    }
+    tr:first-of-type {
+        background-color: black;
+        color: rgb(rgb(0, 86, 0));
+    }
+    td{
+        width: 8em;
+    }
+    input{
+        width: 5em;
+        padding: 0;
+        margin: 0;
+    }
+    .color_display {
+        background-color: black;
+        color: green;
+        text-align: right;
+    }
+    .buttons{
+        background-color: red;
+        padding: 0;
+        margin: 0;
+    }
