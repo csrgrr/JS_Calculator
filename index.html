@@ -26,28 +26,28 @@
          function restart(){
             digit="";
             restarting=true;
-            accumulated=parseInt(document.getElementById("display").value = 0);
+            accumulated=parseFloat(document.getElementById("display").value = 0);
             digit=0;
          }
 
          function addition(){
             if(p_operation == false){
             if(substract){
-                accumulated = accumulated - parseInt(digit);
+                accumulated = accumulated - parseFloat(digit);
                 document.getElementById("display").value=accumulated;
               
             }else if(divide){
-                accumulated = accumulated/parseInt(digit);
+                accumulated = accumulated/parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             } else if (multiply) {
-            accumulated = accumulated * parseInt(digit);
+            accumulated = accumulated * parseFloat(digit);
             document.getElementById("display").value=accumulated;
             }else {
-            accumulated = accumulated + parseInt(digit);
+            accumulated = accumulated + parseFloat(digit);
             document.getElementById("display").value=accumulated;
             }
         } else {
-            accumulated=parseInt(digit);
+            accumulated=parseFloat(digit);
             cp_operation=false;
         }
              digit="";
@@ -57,20 +57,20 @@
          function substraction(){
             if(p_operation == false){
             if(add){
-                accumulated = accumulated+parseInt(digit);
+                accumulated = accumulated+parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             }else if(divide){
-                accumulated = accumulated/parseInt(digit);
+                accumulated = accumulated/parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             } else if (multiply){
-            accumulated = accumulated * parseInt(digit);
+            accumulated = accumulated * parseFloat(digit);
             document.getElementById("display").value=accumulated;
             }else{
-            accumulated = accumulated - parseInt(digit);
+            accumulated = accumulated - parseFloat(digit);
             document.getElementById("display").value=accumulated;
           }
         } else {
-            accumulated=parseInt(digit);
+            accumulated=parseFloat(digit);
             cp_operation=false;
         }
             digit="";
@@ -81,21 +81,21 @@
          function multiplication(){
             if(p_operation == false){
             if(substract){
-                accumulated = accumulated - parseInt(digit);
+                accumulated = accumulated - parseFloat(digit);
                 document.getElementById("display").value=accumulated;
               
             } else if(add){
-                accumulated = accumulated+parseInt(digit);
+                accumulated = accumulated+parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             } else if(divide){
-                accumulated = accumulated/parseInt(digit);
+                accumulated = accumulated/parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             } else {
-            accumulated = accumulated * parseInt(digit);
+            accumulated = accumulated * parseFloat(digit);
             document.getElementById("display").value=accumulated;
             }
         } else {
-            accumulated=parseInt(digit);
+            accumulated=parseFloat(digit);
             cp_operation=false;
         }
              digit="";
@@ -106,21 +106,21 @@
          function division(){
             if(p_operation == false){
             if(substract){
-                accumulated = accumulated - parseInt(digit);
+                accumulated = accumulated - parseFloat(digit);
                 document.getElementById("display").value=accumulated;
               
             } else if(add){
-                accumulated = accumulated+parseInt(digit);
+                accumulated = accumulated+parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             } else if(multiply){
-                accumulated = accumulated*parseInt(digit);
+                accumulated = accumulated*parseFloat(digit);
                 document.getElementById("display").value=accumulated;
             } else {
-            accumulated = accumulated / parseInt(digit);
+            accumulated = accumulated / parseFloat(digit);
             document.getElementById("display").value=accumulated;
             }
         } else {
-            accumulated=parseInt(digit);
+            accumulated=parseFloat(digit);
             cp_operation=false;
         }
              digit="";
@@ -129,23 +129,23 @@
 
          function result(){
             if(add){
-                document.getElementById("display").value=accumulated+parseInt(digit);
+                document.getElementById("display").value=accumulated+parseFloat(digit);
                 console.log(accumulated)
-                console.log(parseInt(digit))
-                console.log(accumulated+parseInt(digit))
+                console.log(parseFloat(digit))
+                console.log(accumulated+parseFloat(digit))
 
             } else if(substract){
-                document.getElementById("display").value=accumulated-parseInt(digit);
+                document.getElementById("display").value=accumulated-parseFloat(digit);
 
             }else if(multiply){
-                document.getElementById("display").value=accumulated*parseInt(digit);
+                document.getElementById("display").value=accumulated*parseFloat(digit);
 
             }else{
-                document.getElementById("display").value=accumulated/parseInt(digit);
+                document.getElementById("display").value=accumulated/parseFloat(digit);
 
             }
 
-            accumulated=parseInt(document.getElementById("display").value);
+            accumulated=parseFloat(document.getElementById("display").value);
             digit=0;
          }
        
