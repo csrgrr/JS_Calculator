@@ -1,32 +1,112 @@
+@font-face {
+    font-family: calculator;
+    src: url(Calculator.ttf);
+  }
 
-    table {
-        width: 10em;
-        height: 10em;
-        text-align: center;
-    }
-    table, th, td {
-      border:1px solid black;
-      border-collapse: collapse;
-    }
-    tr:first-of-type {
-        background-color: black;
-        color: rgb(rgb(0, 86, 0));
-    }
-    td{
-        width: 8em;
-    }
-    input{
-        width: 5em;
-        padding: 0;
-        margin: 0;
-    }
-    .color_display {
-        background-color: black;
-        color: green;
-        text-align: right;
-    }
-    .buttons{
-        background-color: red;
-        padding: 0;
-        margin: 0;
-    }
+*{ 
+    font-family: calculator;
+    font-weight: bolder;
+}
+
+body {
+    background-color: #335C67;
+}
+
+#calculator_body {
+    background-color: #9E2A2B;
+    box-shadow:  inset -2px -2px 5px 1px #540B0E,
+    inset 2px 2px 7px 1px black;
+    box-shadow: .2em .2em#E09F3E;
+    border-radius: 1em;
+    border-top: solid black;
+    border-left: solid black;
+
+    box-sizing: border-box;
+    width: 20em;
+    margin: auto;
+    padding: 1.5em;
+
+    
+}
+
+#display {
+    
+    box-sizing: border-box;
+    width: 14em;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 1em;
+    border-radius: 1em;
+
+    font-size: 1.2rem;
+    background-color: black;
+    text-align: right;
+    
+
+    color: green;
+    text-shadow: 0px 0px 6px green;
+}
+
+li{
+    list-style: none;
+    padding:.2em;
+    margin: 0;
+}
+
+#buttonBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: .3em;
+
+    background-color: #9E2A2B;
+    box-shadow:  inset -2px -2px 5px 1px #540B0E,
+    inset 2px 2px 7px 1px #540B0E;
+    border-top: solid black;
+    border-left: solid black;
+    border-radius: 1em;
+    
+
+}
+
+div#numberBlock ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+div#operationBlock ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+
+.buttons{
+    background-color: #E09F3E;
+    color: #FFF3B0;
+    text-shadow: 0px 0px 4px rgb(255, 255, 255);
+ 
+
+    box-shadow: -2px -2px 5px 1px #540B0E,
+    2px 2px 7px 1px #540B0E;
+    border-top: solid black;
+    border-left: solid black;
+    border-right: solid gray;
+    border-bottom: solid gray;
+ 
+    width: 3.3em;
+    height: 3.3em;
+    border-radius: 2em;
+}
+#num0 {
+    width: 6.6em;
+}
+
+#suma, #equal {
+    height:  7em;
+}

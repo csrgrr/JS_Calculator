@@ -154,44 +154,50 @@
 
 
 
-<body style="background-color: white;">
-<table width="15%">
-    <tr>
-        <td colspan="4">
-        <input name="display" type="text" class="color_display" id="display" size="50">
-    </td>
-    </tr>
-    <tr>
-        <td> </td>
-        <td> </td>
-        <td><input type="button" id="reiniciar" value="C" onclick="reinicio()"></td>
-        <td class="buttons"><input type="button" id="suma" value="+" onclick="suma()"></td>
-    </tr>
-    <tr>
-        <td><input type="button" id="num7" value="7" onclick="display_nums(7)"></td>
-        <td><input type="button" id="num8" value="8" onclick="display_nums(8)"></td>
-        <td><input type="button" id="num9" value="9" onclick="display_nums(9)"></td>
-        <td class="buttons"><input type="button" id="resta" value="-" onclick="resta()"></td>
-    </tr>
-    <tr>
-        <td><input type="button" id="num4" value="4" onclick="display_nums(4)"></td>
-        <td><input type="button" id="num5" value="5" onclick="display_nums(5)"></td>
-        <td><input type="button" id="num6" value="6" onclick="display_nums(6)"></td>
-        <td class="buttons"><input type="button" id="multiplicacion" value="*" onclick="multiplicacion()"></td>
-    </tr>
-    <tr>
-        <td><input type="button" id="num1" value="1" onclick="display_nums(1)"></td>
-        <td><input type="button" id="num2" value="2" onclick="display_nums(2)"></td>
-        <td><input type="button" id="num3" value="3" onclick="display_nums(3)" ></td>
-        <td class="buttons"><input type="button" id="division" value="/" onclick="division()"></td>
-    </tr>
-    <tr>
-        <td colspan="2"><input type="button" id="num0" value="0" onclick="display_nums(0)"></td>
-        <td><input type="button" id="numcoma" value="," onclick="display_nums('.')"></td>
-        <td class="buttons"><input type="button" id="equal" value="=" onclick="result()"></td>
-    </tr>
+<body>
 
-</table>
+<div id="calculator_body">
+    <input name="display" type="text" class="color_display" id="display" size="50">
+<div id="buttonBlock">
+<div id="numberBlock">
+    <ul>
+        <li><input type="button" class="buttons" id="num7" value="7" onclick="display_nums(7)"></li>
+        <li><input type="button" class="buttons" id="num8" value="8" onclick="display_nums(8)"></li>
+        <li><input type="button" class="buttons" id="num9" value="9" onclick="display_nums(9)"></li>
+    </ul>
+    <ul>
+        <li><input type="button" class="buttons" id="num4" value="4" onclick="display_nums(4)"></li>
+        <li><input type="button" class="buttons" id="num5" value="5" onclick="display_nums(5)"></li>
+        <li><input type="button" class="buttons" id="num6" value="6" onclick="display_nums(6)"></li>
+    </ul>
+    <ul>
+        <li><input type="button" class="buttons" id="num1" value="1" onclick="display_nums(1)"></li>
+        <li><input type="button" class="buttons" id="num2" value="2" onclick="display_nums(2)"></li>
+        <li><input type="button" class="buttons" id="num3" value="3" onclick="display_nums(3)"></li>
+    </ul>
+    <ul>
+        <li><input type="button" class="buttons" id="num0" value="0" onclick="display_nums(0)"></li>
+        <li><input type="button" class="buttons" id="numDot" value="." onclick="display_nums('.')"></li>
+    </ul>
+</div>
+
+<div id="operationBlock">
+    <ul>
+        <li><input type="button" class="buttons" id="division" value="/" onclick="division()"></li>
+        <li><input type="button" class="buttons" id="reiniciar" value="C" onclick="reinicio()"></li>
+    </ul>
+    <ul>
+        <li><input type="button" class="buttons" id="resta" value="-" onclick="resta()"></li>
+        <li><input type="button" class="buttons" id="multiplicacion" value="*" onclick="multiplicacion()"></li>
+    </ul>
+    <ul>
+        <li><input type="button" class="buttons" id="suma" value="+" onclick="suma()"></li>
+        <li><input type="button" class="buttons" id="equal" value="=" onclick="result()"></li>
+    </ul>
+</div>
+</div>
+</div>
+
 <script>         
 document.getElementById("display").value=0;
 </script>
