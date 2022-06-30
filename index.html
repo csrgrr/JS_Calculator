@@ -10,143 +10,143 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
-        let cifra="";
-        let acumulado=0;
-        p_operacion=true;
-        let sumar=false;
-        let restar=false;
-        let multiplicar = false;
-        let dividir = false;
-        let reiniciar = false;
+        let digit="";
+        let accumulated=0;
+        p_operation=true;
+        let add=false;
+        let substract=false;
+        let multiply = false;
+        let divide = false;
+        let restarting = false;
          function display_nums(number){
-           document.getElementById("display").value=cifra+number;
-           cifra=document.getElementById("display").value;
+           document.getElementById("display").value=digit+number;
+           digit=document.getElementById("display").value;
          }
 
-         function reinicio(){
-            cifra="";
-            reiniciar=true;
-            acumulado=parseInt(document.getElementById("display").value = 0);
-            cifra=0;
+         function restart(){
+            digit="";
+            restarting=true;
+            accumulated=parseInt(document.getElementById("display").value = 0);
+            digit=0;
          }
 
-         function suma(){
-            if(p_operacion == false){
-            if(restar){
-                acumulado = acumulado - parseInt(cifra);
-                document.getElementById("display").value=acumulado;
+         function addition(){
+            if(p_operation == false){
+            if(substract){
+                accumulated = accumulated - parseInt(digit);
+                document.getElementById("display").value=accumulated;
               
-            }else if(dividir){
-                acumulado = acumulado/parseInt(cifra);
-                document.getElementById("display").value=acumulado;
-            } else if (multiplicar) {
-            acumulado = acumulado * parseInt(cifra);
-            document.getElementById("display").value=acumulado;
+            }else if(divide){
+                accumulated = accumulated/parseInt(digit);
+                document.getElementById("display").value=accumulated;
+            } else if (multiply) {
+            accumulated = accumulated * parseInt(digit);
+            document.getElementById("display").value=accumulated;
             }else {
-            acumulado = acumulado + parseInt(cifra);
-            document.getElementById("display").value=acumulado;
+            accumulated = accumulated + parseInt(digit);
+            document.getElementById("display").value=accumulated;
             }
         } else {
-            acumulado=parseInt(cifra);
-            cp_operacion=false;
+            accumulated=parseInt(digit);
+            cp_operation=false;
         }
-             cifra="";
-            sumar=true;
+             digit="";
+            add=true;
          }
 
-         function resta(){
-            if(p_operacion == false){
-            if(sumar){
-                acumulado = acumulado+parseInt(cifra);
-                document.getElementById("display").value=acumulado;
-            }else if(dividir){
-                acumulado = acumulado/parseInt(cifra);
-                document.getElementById("display").value=acumulado;
-            } else if (multiplicar){
-            acumulado = acumulado * parseInt(cifra);
-            document.getElementById("display").value=acumulado;
+         function substraction(){
+            if(p_operation == false){
+            if(add){
+                accumulated = accumulated+parseInt(digit);
+                document.getElementById("display").value=accumulated;
+            }else if(divide){
+                accumulated = accumulated/parseInt(digit);
+                document.getElementById("display").value=accumulated;
+            } else if (multiply){
+            accumulated = accumulated * parseInt(digit);
+            document.getElementById("display").value=accumulated;
             }else{
-            acumulado = acumulado - parseInt(cifra);
-            document.getElementById("display").value=acumulado;
+            accumulated = accumulated - parseInt(digit);
+            document.getElementById("display").value=accumulated;
           }
         } else {
-            acumulado=parseInt(cifra);
-            cp_operacion=false;
+            accumulated=parseInt(digit);
+            cp_operation=false;
         }
-            cifra="";
-            sumar=false;
-            restar=true;
+            digit="";
+            add=false;
+            substract=true;
          }
 
-         function multiplicacion(){
-            if(p_operacion == false){
-            if(restar){
-                acumulado = acumulado - parseInt(cifra);
-                document.getElementById("display").value=acumulado;
+         function multiplication(){
+            if(p_operation == false){
+            if(substract){
+                accumulated = accumulated - parseInt(digit);
+                document.getElementById("display").value=accumulated;
               
-            } else if(sumar){
-                acumulado = acumulado+parseInt(cifra);
-                document.getElementById("display").value=acumulado;
-            } else if(dividir){
-                acumulado = acumulado/parseInt(cifra);
-                document.getElementById("display").value=acumulado;
+            } else if(add){
+                accumulated = accumulated+parseInt(digit);
+                document.getElementById("display").value=accumulated;
+            } else if(divide){
+                accumulated = accumulated/parseInt(digit);
+                document.getElementById("display").value=accumulated;
             } else {
-            acumulado = acumulado * parseInt(cifra);
-            document.getElementById("display").value=acumulado;
+            accumulated = accumulated * parseInt(digit);
+            document.getElementById("display").value=accumulated;
             }
         } else {
-            acumulado=parseInt(cifra);
-            cp_operacion=false;
+            accumulated=parseInt(digit);
+            cp_operation=false;
         }
-             cifra="";
-            multiplicar=true;
+             digit="";
+            multiply=true;
          }
 
     
          function division(){
-            if(p_operacion == false){
-            if(restar){
-                acumulado = acumulado - parseInt(cifra);
-                document.getElementById("display").value=acumulado;
+            if(p_operation == false){
+            if(substract){
+                accumulated = accumulated - parseInt(digit);
+                document.getElementById("display").value=accumulated;
               
-            } else if(sumar){
-                acumulado = acumulado+parseInt(cifra);
-                document.getElementById("display").value=acumulado;
-            } else if(multiplicar){
-                acumulado = acumulado*parseInt(cifra);
-                document.getElementById("display").value=acumulado;
+            } else if(add){
+                accumulated = accumulated+parseInt(digit);
+                document.getElementById("display").value=accumulated;
+            } else if(multiply){
+                accumulated = accumulated*parseInt(digit);
+                document.getElementById("display").value=accumulated;
             } else {
-            acumulado = acumulado / parseInt(cifra);
-            document.getElementById("display").value=acumulado;
+            accumulated = accumulated / parseInt(digit);
+            document.getElementById("display").value=accumulated;
             }
         } else {
-            acumulado=parseInt(cifra);
-            cp_operacion=false;
+            accumulated=parseInt(digit);
+            cp_operation=false;
         }
-             cifra="";
-            dividir=true;
+             digit="";
+            divide=true;
          }
 
          function result(){
-            if(sumar){
-                document.getElementById("display").value=acumulado+parseInt(cifra);
-                console.log(acumulado)
-                console.log(parseInt(cifra))
-                console.log(acumulado+parseInt(cifra))
+            if(add){
+                document.getElementById("display").value=accumulated+parseInt(digit);
+                console.log(accumulated)
+                console.log(parseInt(digit))
+                console.log(accumulated+parseInt(digit))
 
-            } else if(restar){
-                document.getElementById("display").value=acumulado-parseInt(cifra);
+            } else if(substract){
+                document.getElementById("display").value=accumulated-parseInt(digit);
 
-            }else if(multiplicar){
-                document.getElementById("display").value=acumulado*parseInt(cifra);
+            }else if(multiply){
+                document.getElementById("display").value=accumulated*parseInt(digit);
 
             }else{
-                document.getElementById("display").value=acumulado/parseInt(cifra);
+                document.getElementById("display").value=accumulated/parseInt(digit);
 
             }
 
-            acumulado=parseInt(document.getElementById("display").value);
-            cifra=0;
+            accumulated=parseInt(document.getElementById("display").value);
+            digit=0;
          }
        
     </script>
@@ -184,14 +184,14 @@
 <div id="operationBlock">
     <ul>
         <li><input type="button" class="buttons" id="division" value="/" onclick="division()"></li>
-        <li><input type="button" class="buttons" id="reiniciar" value="C" onclick="reinicio()"></li>
+        <li><input type="button" class="buttons" id="restarting" value="C" onclick="restart()"></li>
     </ul>
     <ul>
-        <li><input type="button" class="buttons" id="resta" value="-" onclick="resta()"></li>
-        <li><input type="button" class="buttons" id="multiplicacion" value="*" onclick="multiplicacion()"></li>
+        <li><input type="button" class="buttons" id="substraction" value="-" onclick="substraction()"></li>
+        <li><input type="button" class="buttons" id="multiplication" value="*" onclick="multiplication()"></li>
     </ul>
     <ul>
-        <li><input type="button" class="buttons" id="suma" value="+" onclick="suma()"></li>
+        <li><input type="button" class="buttons" id="addition" value="+" onclick="addition()"></li>
         <li><input type="button" class="buttons" id="equal" value="=" onclick="result()"></li>
     </ul>
 </div>
